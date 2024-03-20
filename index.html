@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificador e Decodificador de Mensagens</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img src="./assets/Frame 6.png" alt="Logo" class="logo">
+    </header>
+    <div class="container">
+        <div class="left-column">
+            <textarea id="input-text" placeholder="Digite sua mensagem aqui"></textarea>
+            <p class="attention-msg"><img src="./assets/bi_exclamation-circle-fill.png" alt="Ícone de Atenção"> Atenção: Digite apenas letras minúsculas!</p>
+
+            <div class="buttons">
+                <button onclick="encode()" class="green-button">Codificar</button>
+                <button onclick="decode()" class="green-button2">Decodificar</button>
+            </div>
+        </div>
+        <div class="right-column">
+            
+            <div id="output">
+                <img src="./assets/High quality products 1 3.png" alt="menino">
+                <p class="output-title">Nenhuma mensagem encontrada</p>
+            </div>
+            <div id="copy-output-popup" class="popup">
+                <p id="copy-output-msg">Texto copiado!</p>
+                <button onclick="closePopup()">OK</button>
+            </div>
+            <button id="copy-output-btn" onclick="copyOutputToClipboard()">Copiar</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

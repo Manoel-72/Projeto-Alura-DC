@@ -1,0 +1,261 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F3F5FC;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start; /* Alinha o conteúdo no início do flex container (à esquerda) */
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.logo {
+    width: 85px;
+    height: auto;
+   
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+.left-column {
+    flex: 1;
+    color: #495057;
+    background: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    font-size: 16px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+.green-button,
+.green-button2 {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid aqua;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    width: 140px ;
+    height: 50px;
+    text-align: center;
+    transition: background-color 0.3s;
+    margin-right: 10px; /* Adiciona margem à direita do primeiro botão */
+}
+
+.green-button:hover,
+.green-button2:hover {
+    border: 2px solid aqua;
+}
+
+
+.right-column {
+    flex: 1;
+    margin-right: 10%;
+    background: white;
+    color: #052051;
+    padding: 20px;
+    border-radius: 32px;
+    box-shadow: 0 2px 4px rgba(38, 2, 240, 0.1);
+    max-width: 300px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    min-height: 600px; /* Altura mínima da coluna de resultado */
+    font-size: 24px;
+    border: #f3f5fc;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+#input-text{
+    color: #052051;
+    font-size: 24px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Muda para uma coluna em telas menores */
+        align-items: center; /* Alinha os itens no centro */
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+        margin-right: 0; /* Remove o espaçamento entre as colunas */
+        margin-top: 0;
+        margin-left: auto; /* Alinha a coluna à direita */
+        max-width: 100%;
+    }
+    .green-button,
+    .green-button2 {
+        width: 160px; /* Volta ao tamanho original em telas menores */
+        height: 60px;
+    }
+    #copy-output-btn {
+        margin: 10% auto; /* Define margens superior e inferior para 10% e centraliza horizontalmente */
+        display: block;
+        text-align: center;
+    }
+}
+
+
+
+.output-title {
+    color: #343A40;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#copy-output-btn {
+    padding: 24px;
+    gap: 8px;
+    border-radius: 24px;
+    border: 1px solid var(--Dark-blue-dark-blue-300, #0A3871);
+    text-decoration: none;
+    color: #052051;
+    width: 160px ;
+    height: 60px;
+   
+    margin-top: 10%;
+    margin-left: 22%;
+    cursor: pointer;
+}
+
+#copy-output-btn:hover {
+    border: 2px solid aqua; /* Verde mais escuro ao passar o mouse */
+}
+#output{
+    color: #052051;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#output img{
+    max-width: 250px;
+    height: 250px;
+    width: auto;
+    height: auto;
+    margin-top: 4%;
+}
+
+textarea {
+    width: 96%;
+    height: 200px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none; /* Remove a borda */
+    border-radius: 5px;
+    background-color: #f3f5fc;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #052051; /* Cor do texto */
+    text-align: center; /* Alinha o texto no centro */
+    resize: none; /* Impede o redimensionamento */
+}
+
+textarea::placeholder {
+    color: #052051; /* Cor do placeholder */
+    opacity: 0.5; /* Opacidade do placeholder */
+    text-align: center; /* Alinha o placeholder no centro */
+}
+
+
+#copy-msg {
+    border-radius: 24px;
+    background: var(--Dark-blue-dark-blue-300, #0A3871);
+    color:white;
+    border: #0A3871;
+    font-weight: bold;
+}
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    display: none;
+}
+
+.popup p {
+    color: #052051;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.popup button {
+    padding: 10px 20px;
+    border-radius: 24px;
+    background: var(--Dark-blue-dark-blue-300, #0A3871);
+    color:white;
+    border: #0A3871;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: background-color 0.3s;
+}
+
+.popup button:hover {
+    border: 2px solid aqua;
+}
+.green-button {
+    border-radius: 24px;
+    background: var(--Dark-blue-dark-blue-300, #0A3871);
+    color:white;
+    border: #0A3871; /* Ajuste o espaçamento entre os botões conforme necessário */
+    
+}
+
+
+.green-button2 {
+    border-radius: 24px;
+    border: 1px solid var(--Dark-blue-dark-blue-300, #0A3871);
+    background: #D8DFE8;
+    color: var(--Dark-blue-dark-blue-300, #0A3871);
+}
+
+
+
